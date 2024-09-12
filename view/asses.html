@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENQ KYC Form</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/pub/asses.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 0.875em;
+            display: block;
+            margin-top: 0.25em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>GENQ KYC FORM</h1>
+
+        <form id="kycForm">
+            <!-- Bio Data Section -->
+            <fieldset>
+                <legend>Bio Data</legend>
+                <div class="row">
+                    <div class="column">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                        <span class="error" id="firstNameError"></span>
+                    </div>
+                    <div class="column">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                        <span class="error" id="lastNameError"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                        <span class="error" id="dobError"></span>
+                    </div>
+                    <div class="column">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">-- Select Gender --</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span class="error" id="genderError"></span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Location Section -->
+            <fieldset>
+                <legend>Location</legend>
+                <div class="row">
+                    <div class="column">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Country">
+                        <span class="error" id="countryError"></span>
+                    </div>
+                    <div class="column">
+                        <label for="state">State / District</label>
+                        <input type="text" id="state" name="state" placeholder="State / District">
+                        <span class="error" id="stateError"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="town">Town</label>
+                        <input type="text" id="town" name="town" placeholder="Town">
+                        <span class="error" id="townError"></span>
+                    </div>
+                    <div class="column">
+                        <label for="zipCode">Zip Code</label>
+                        <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code">
+                        <span class="error" id="zipCodeError"></span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Contacts and Address Section -->
+            <fieldset>
+                <legend>Contacts and Address</legend>
+                <div class="row">
+                    <div class="column">
+                        <label for="phoneNumber1">Phone Number 1</label>
+                        <input type="text" id="phoneNumber1" name="phoneNumber1" placeholder="Phone Number 1">
+                        <span class="error" id="phoneNumber1Error"></span>
+                    </div>
+                    <div class="column">
+                        <label for="phoneNumber2">Phone Number 2</label>
+                        <input type="text" id="phoneNumber2" name="phoneNumber2" placeholder="Phone Number 2">
+                        <span class="error" id="phoneNumber2Error"></span>
+                    </div>
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+                    <span class="error" id="emailError"></span>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript Validation -->
+   <script src="/pub/js/asses.js"></script>
+</body>
+</html>
